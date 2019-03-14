@@ -1,0 +1,73 @@
+body {
+  min-height: 100%;
+}
+.wrapper {
+  width: 100%;
+}
+
+//header
+header {
+  height: 150px;
+  width: 100%;
+  position: fixed;
+}
+.header-top {
+  height: 90px;
+  width: 100%;
+  &__left {
+    height: 100%;
+    width: 50%;
+    float: left;
+    background-color: #28385E;
+  }
+  &__right {
+    height: 90px;
+    width: 50%;
+    float: right;
+    background-color: #28385E;
+  }
+}
+.title {
+  color: #DEDEDE;
+  font-size: 40px;
+  margin: 15px 0 0 15px;
+}
+.icon {
+  color: #DEDEDE;
+  font-size: 50px;
+  margin: 6px 0 0 220px;
+}
+.color {
+  color: #28385E;
+}
+.header-bottom {
+  height: 40%;
+  width: 100%;
+  background-color: #6A91C1;
+}
+
+//main
+main {
+  padding-top: 150px;
+}
+.main-contents {
+  height: 1000px;
+  width: 100%;
+}
+.left-contents {
+  height: 100%;
+  width: 300px;
+  position: fixed;
+  word-break: normal;
+  float: left;
+  background-color: #516C8D;
+}
+.right-contents {
+  min-height: 100%;
+  width: calc(100% - 300px);
+  float: right;
+  background-color: #ccc;
+}
+.scroll-container {
+  scroll-behavior: smooth;
+}

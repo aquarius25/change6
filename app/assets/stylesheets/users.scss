@@ -1,3 +1,27 @@
-// Place all the styles related to the users controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.selfback-image {
+  height: 440px;
+  width: 900px;
+  margin: 20px 40px;
+  background-color: white;
+}
+
+.background-image {
+  height: 400px;
+  width: 900px;
+  background-size: cover;
+  text-align: left;
+}
+.self-name {
+  color: white;
+  font-size: 40px;
+  text-align: center;
+  float: right;
+  margin: 260px 30px 0 0;
+}
+.self-icon {
+  height: 240px;
+  width: 220px;
+  margin: 170px 30px;
+  border: 10px solid #f5f5f5;
+}

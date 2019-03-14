@@ -1,3 +1,54 @@
-// Place all the styles related to the groups controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.n-btn {
+  position: absolute;
+  top: 27px;
+  right: 87px;
+}
+
+.group-container {
+  height: 120px;
+  width: 98%;
+  margin: 10px;
+  border-radius: 10px;
+  background-color: #5DA797;
+}
+.group-image {
+  height: 100px;
+  width: 100px;
+  margin: 10px;
+  border-radius: 5px;
+  display: inline-block;
+  float: left;
+  background-color: #ccc;
+  &__top {
+    height: 100px;
+    width: 100px;
+  }
+}
+.group-name {
+  width: 30%;
+  font-size: 30px;
+  margin: 10px;
+  display: inline-block;
+  background-color: #5DA797;
+}
+.group-last-message {
+  height: 50px;
+  width: 30%;
+  font-size: 22px;
+  margin-left: 130px;
+  background-color: #5DA797;
+}
+.group-time {
+  height: 30px;
+  width: 180px;
+  margin: 15px 20px;
+  float: right;
+  background-color: #5DA797;
+}
+
+.group-form {
+  height: 500px;
+  width: 100%;
+  text-align: center;
+  background-color: #5DA797;
+}
