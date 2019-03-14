@@ -1,0 +1,35 @@
+<div class="wrapper">
+  <header>
+    <div class="header-top">
+      <div class="header-top__left">
+        <p class="title">Article</p>
+      </div>
+      <div class="header-top__right">
+      </div>
+    </div>
+    <div class="header-bottom">
+      <%= link_to accounts_path do %>
+        <i class="fas fa-user-alt icon"></i>
+      <% end %>
+      <%= link_to tweets_path do %>
+        <i class="far fa-comment-dots icon"></i>
+      <% end %>
+      <%= link_to groups_path do %>
+        <i class="far fa-object-group icon"></i>
+      <% end  %>
+      <%= link_to articles_path do %>
+        <i class="far fa-sticky-note icon color"></i>
+      <% end %>
+    </div>
+  </header>
+  <main>
+    <div class="main-contents">
+      <div class="left-contents">
+        <%= render partial: "/shared/left_contents" %>
+      </div>
+      <div class="right-contents scroll-container">
+        <p>article coming soon...</p>
+      </div>
+    </div>
+  </main>
+</div>

@@ -1,0 +1,64 @@
+<div class="wrapper">
+  <header>
+    <div class="header-top">
+      <div class="header-top__left">
+        <p class="title">Message</p>
+      </div>
+      <div class="header-top__right">
+        <div class="to-group">
+          <%= link_to "UpdateGroup", edit_group_path(@group), class: "b-btn" %>
+        </div>
+      </div>
+    </div>
+    <div class="header-bottom">
+      <%= link_to accounts_path do %>
+        <i class="fas fa-user-alt icon"></i>
+      <% end %>
+      <%= link_to tweets_path do %>
+        <i class="far fa-comment-dots icon"></i>
+      <% end %>
+      <%= link_to groups_path do %>
+        <i class="far fa-object-group icon color"></i>
+      <% end %>
+      <%= link_to articles_path do %>
+        <i class="far fa-sticky-note icon"></i>
+      <% end %>
+    </div>
+  </header>
+  <main>
+    <div class="main-contents">
+      <div class="left-contents">
+        <p>- You have groups -</p>
+        <% current_user.groups.each do |group| %>
+          <%= link_to group_messages_path(group) do %>
+            <%= group.name %></br>
+          <% end %>
+          <%= group.show_last_message %></br>
+        <% end %>
+        <p>- ThisGroupMembers -</p>
+        <% @users.each do |user| %>
+          <%= user.name %>
+        <% end %>
+      </div>
+      <div class="right-contents scroll-container tweet-size">
+        <div class="tweet_contents">
+          <% @messages.each do |message| %>
+            <%= render partial: "message_contents", locals: { message: message } %>
+          <% end %>
+        </div>
+        <div class="tweet-form">
+          <div class="tweet-form__inner">
+            <%= form_for [@group, @message] do |f| %>
+              <%= f.text_field :text, class: "form-input", placeholder: "type a message & send image" %>
+              <%= f.label :image do %>
+                <i class="fas fa-image form-icon pointer"></i>
+                <%= f.file_field :image, class: "hidden" %>
+              <% end %>
+              <%= f.submit "send", class: "form-submit" %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>

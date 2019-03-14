@@ -1,0 +1,67 @@
+<div class="wrapper">
+  <header>
+    <div class="header-top">
+      <div class="header-top__left">
+        <p class="title">AboutFriend</p>
+      </div>
+      <div class="header-top__right">
+      </div>
+    </div>
+    <div class="header-bottom">
+      <%= link_to accounts_path do %>
+        <i class="fas fa-user-alt icon color"></i>
+      <% end %>
+      <%= link_to tweets_path do %>
+        <i class="far fa-comment-dots icon"></i>
+      <% end %>
+      <%= link_to groups_path do %>
+        <i class="far fa-object-group icon"></i>
+      <% end  %>
+      <%= link_to articles_path do %>
+        <i class="far fa-sticky-note icon"></i>
+      <% end %>
+    </div>
+  </header>
+  <main>
+    <div class="main-contents">
+      <div class="left-contents">
+        <%= render partial: "/shared/left_contents" %>
+      </div>
+      <div class="right-contents scroll-container">
+        <% if @account %>
+          <div class="selfback-image">
+            <p class="self-name">
+              <%= @account.last_name %>
+              <%= @account.first_name %>
+            </p>
+            <div class="background-image" style="background-image: url(http://acusd1.org/High%20School/1516events/Van%20Voorhis%201516/Info%20Pro%2015-16/18%20Braeton/Pictures/My%20Favorite%20Hobby/Slider3.jpg);">
+              <%= image_tag (@account.image.url), class: "self-icon" %>
+            </div>
+          </div>
+          <div class="profile-links">
+            <i class="fab fa-github"></i>
+              <%= link_to "GitHub", @account.link1, class: "links" %>
+            <i class="fas fa-blog"></i>
+              <%= link_to "TechBlog", @account.link2, class: "links" %>
+            <i class="fab fa-twitter"></i>
+              <%= link_to "Twitter", @account.link3, class: "links" %>
+          </div>
+          <div class="account-profile">
+          - Profile -
+            <%= @account.profile %>
+          </div>
+        <% else %>
+          <div class="selfback-image">
+            <p class="self-name">
+              No Name
+            </p>
+            <div class="background-image" style="background-image: url(http://acusd1.org/High%20School/1516events/Van%20Voorhis%201516/Info%20Pro%2015-16/18%20Braeton/Pictures/My%20Favorite%20Hobby/Slider3.jpg);">
+              <%= image_tag ("no_image.jpg"), class: "self-icon" %>
+            </div>
+          </div>
+          <p>-Profile-</p>
+        <% end %>
+      </div>
+    </div>
+  </main>
+</div>

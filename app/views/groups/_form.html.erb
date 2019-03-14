@@ -1,0 +1,21 @@
+<%= form_for @group do |f| %>
+  <% if @group.errors.any? %>
+    <div class="group-form__error">
+      <h2><%= @group.errors.full_messages.count %>件のエラーが発生しました。</h2>
+      <ul>
+        <% @group.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= f.label :group_name %></br>
+  <%= f.text_field :name, placeholder: "add_group_name" %></br>
+
+  <%= f.collection_check_boxes(:user_ids, User.all, :id, :name) do |b| %>
+    <%= b.label { b.check_box + b.text } %>
+  <% end %></br>
+
+  <%= f.submit "Update", class: "form-submit" %>
+<% end %>

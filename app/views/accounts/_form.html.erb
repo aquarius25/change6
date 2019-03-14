@@ -1,0 +1,43 @@
+<%= form_for @account do |f| %>
+
+  <div class="field">
+    <%= f.label :Last_Name %></br>
+    <%= f.text_field :last_name, placeholder: "名字" %></dr>
+  </div>
+
+  <div class="field">
+    <%= f.label :First_Name %></br>
+    <%= f.text_field :first_name, placeholder: "本名" %></dr>
+  </div>
+
+  <div class="field">
+    <%= f.label :Your_Icon %></br>
+    <%= f.file_field :image %></br>
+  </div>
+
+  <div class="field">
+    <%= f.label :Profile %></br>
+    <%= f.text_area :profile, placeholder: "profile", class: "text" %></dr>
+  </div>
+
+  <div class="field">
+    <%= f.label :GitHub %></br>
+    <%= f.text_field :link1, placeholder: "GitHub-Link" %></dr>
+  </div>
+
+  <div class="field">
+    <%= f.label :Blog %></br>
+    <%= f.text_field :link2, placeholder: "TechBlog-Link" %></dr>
+  </div>
+
+  <div class="field">
+    <%= f.label :Twitter %></br>
+    <%= f.text_field :link3, placeholder: "Twitter-Link" %></dr>
+  </div>
+
+  Profile_Update
+  <div class="devise-submit">
+    <%= f.submit "Update", class: "devise-login" %>
+  </div>
+
+<% end %>

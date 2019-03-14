@@ -1,0 +1,9 @@
+<% if current_user.id == message.user_id %>
+  <div class="tweet_contents__tweet right-side">
+    <%= render partial: "message", locals: { message: message } %>
+  </div>
+<% else %>
+  <div class="tweet_contents__tweet left-side">
+    <%= render partial: "message", locals: { message: message } %>
+  </div>
+<% end %>

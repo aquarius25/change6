@@ -1,0 +1,8 @@
+<div class="tweet_contents__tweet--params">
+  <%= simple_format(message.user.name, class:"user-nickname") %>
+  <%= message.created_at.strftime("%Y/%m/%d %H:%M:%S") %>
+  <%= simple_format(message.text, class: "tweet-text") %>
+  <% if message.image.present? %>
+    <%= image_tag (message.image.url) %>
+  <% end %>
+</div>

@@ -1,0 +1,16 @@
+<div class="profile">
+   <div class="profile-image">
+    <% if current_user.account.present? %>
+      <%= image_tag (current_user.account.image.url), alt: "profile-image", class: "user-image" %>
+      <% else %>
+      <%= image_tag ("no_image.jpg"), class: "user-image" %>
+    <% end %>
+  </div>
+  <div class="profile-name">
+    <p>YourName:</p>
+    <i class="fas fa-signature"></i>
+    <%= current_user.name %></br>
+    <i class="fas fa-sign-out-alt"></i>
+      <%= link_to "LogOut", destroy_user_session_path, method: :delete %>
+  </div>
+</div>

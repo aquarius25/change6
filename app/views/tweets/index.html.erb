@@ -1,0 +1,53 @@
+<div class="wrapper">
+  <header>
+    <div class="header-top">
+      <div class="header-top__left">
+        <p class="title">Tweet</p>
+      </div>
+      <div class="header-top__right">
+      </div>
+    </div>
+    <div class="header-bottom">
+      <%= link_to accounts_path do %>
+        <i class="fas fa-user-alt icon"></i>
+      <% end %>
+      <%= link_to tweets_path do %>
+        <i class="far fa-comment-dots icon color"></i>
+      <% end %>
+      <%= link_to groups_path do %>
+        <i class="far fa-object-group icon"></i>
+      <% end  %>
+      <%= link_to articles_path do %>
+        <i class="far fa-sticky-note icon"></i>
+      <% end %>
+    </div>
+  </header>
+  <main>
+    <div class="main-contents">
+      <div class="left-contents">
+        <%= render partial: "/shared/left_contents" %>
+      </div>
+      <div class="right-contents scroll-container tweet-size">
+
+        <div class="tweet_contents">
+          <% @tweets.each do |tweet| %>
+            <%= render partial: "tweet", locals: { tweet: tweet } %>
+          <% end %>
+        </div>
+
+        <div class="tweet-form">
+          <div class="tweet-form__inner">
+            <%= form_for @tweet do |f| %>
+              <%= f.text_field :text, class: "form-input", placeholder: "type a tweet & send image" %>
+              <%= f.label :image do %>
+                <i class="fas fa-image form-icon pointer"></i>
+                <%= f.file_field :image, class: "hidden" %>
+              <% end %>
+              <%= f.submit "send", class: "form-submit" %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
