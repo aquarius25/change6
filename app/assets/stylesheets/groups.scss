@@ -52,3 +52,49 @@
   text-align: center;
   background-color: #5DA797;
 }
+
+@media screen and (max-width: 480px){
+
+  .group-container {
+    height: 90px;
+    width: 98%;
+    margin: 5px;
+    border-radius: 10px;
+    background-color: #5DA797;
+  }
+
+  .group-image {
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+    border-radius: 5px;
+    display: inline-block;
+    float: left;
+    background-color: #ccc;
+    &__top {
+      height: 50px;
+      width: 50px;
+    }
+  }
+
+  .group-name {
+    width: 30%;
+    font-size: 20px;
+    margin: 10px;
+  }
+
+  .group-last-message {
+    height: 40px;
+    width: 40%;
+    font-size: 12px;
+    margin-left: 80px;
+  }
+
+  .group-time {
+    height: 30px;
+    width: 18px;
+    font-size: 0;
+  }
+
+
+}
