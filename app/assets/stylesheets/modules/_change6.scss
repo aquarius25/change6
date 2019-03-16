@@ -71,3 +71,34 @@ main {
 .scroll-container {
   scroll-behavior: smooth;
 }
+
+
+
+
+@media screen and (max-width: 480px){
+
+  .header-bottom {
+    height: 40%;
+    width: 100%;
+  }
+
+  .icon {
+    font-size: 50px;
+    margin: 6px 0 0 40px;
+  }
+
+  .main-contents {
+    height: 100px;
+    width: 100%;
+  }
+
+  .left-contents {
+    height: 100%;
+    width: 120px;
+  }
+
+  .right-contents {
+    min-height: 1000%;
+    width: calc(100% - 120px);
+  }
+}
