@@ -77,3 +77,32 @@ p.tweet-text {
 input {
   background-color: #ccc;
 }
+
+
+
+@media screen and (max-width: 480px){
+
+  .tweet-size {
+    margin-bottom: 80px;
+  }
+  .tweet-form {
+    height: 80px;
+    width: 100%;
+  }
+  .form-input {
+    height: 50px;
+    width: 150px;
+    font-size: 5px;
+    border-radius: 5px;
+    padding: 2px 30px;
+  }
+
+  .form-icon {
+    margin: 0;
+    padding: 20px;
+    position: absolute;
+    top: 12px;
+    right: 125px;
+    font-size: 23px;
+  }
+}
