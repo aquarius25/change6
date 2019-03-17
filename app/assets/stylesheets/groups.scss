@@ -55,6 +55,13 @@
 
 @media screen and (max-width: 480px){
 
+
+  .n-btn {
+    position: absolute;
+    top: 35px;
+    right: 30px;
+  }
+
   .group-container {
     height: 90px;
     width: 98%;
@@ -79,8 +86,8 @@
 
   .group-name {
     width: 30%;
-    font-size: 20px;
-    margin: 10px;
+    font-size: 17px;
+    margin: 10px 0 10px 10px;
   }
 
   .group-last-message {
@@ -91,9 +98,7 @@
   }
 
   .group-time {
-    height: 30px;
-    width: 18px;
-    font-size: 0;
+    display: none;
   }
 
 

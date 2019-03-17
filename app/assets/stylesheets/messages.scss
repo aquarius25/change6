@@ -18,3 +18,19 @@
   float: right;
   background-color: #FF9800;
 }
+
+
+
+@media screen and (max-width: 480px){
+
+  .to-group {
+    height: 60px;
+    width: 100px;
+    font-size: 15px;
+    margin: 15px 20px;
+    border-radius: 5px;
+    float: right;
+    background-color: #FF9800;
+  }
+
+}

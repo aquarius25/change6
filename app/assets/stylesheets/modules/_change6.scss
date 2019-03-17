@@ -82,9 +82,15 @@ main {
     width: 100%;
   }
 
+  .title {
+    color: #DEDEDE;
+    font-size: 40px;
+    margin: 15px 0 0 15px;
+  }
+
   .icon {
-    font-size: 50px;
-    margin: 6px 0 0 40px;
+    font-size: 40px;
+    margin: 10px 0 0 40px;
   }
 
   .main-contents {
@@ -93,12 +99,11 @@ main {
   }
 
   .left-contents {
-    height: 100%;
-    width: 120px;
+    display: none;
   }
 
   .right-contents {
     min-height: 1000%;
-    width: calc(100% - 120px);
+    width: 100%;
   }
 }
